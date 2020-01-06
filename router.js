@@ -1,13 +1,8 @@
 import Vue from "vue";
 import Router from "vue-router";
-
 import auth from "./src/auth";
-
 import Home from "./views/home";
 import Profile from "./views/profile";
-import DisplayData from "./views/display-data";
-import defaultLayout from "./layouts/side-nav-inner-toolbar";
-import simpleLayout from "./layouts/single-card";
 import Signup from './views/signup-form'
 
 
@@ -20,36 +15,8 @@ const router = new Router({
       name: "home",
       meta: { requiresAuth: true },
       components: {
-        layout: defaultLayout,
+        layout: simpleLayout,
         content: Home
-      }
-    },
-    {
-      path: "/profile",
-      name: "profile",
-      meta: { requiresAuth: true },
-      components: {
-        layout: defaultLayout,
-        content: Profile
-      }
-    },
-    {
-      path: "/display-data",
-      name: "display-data",
-      meta: { requiresAuth: true },
-      components: {
-        layout: defaultLayout,
-        content: DisplayData
-      }
-    },
-
-    {
-      path: "/signup-form",
-      name: "signup-form",
-      meta: { requiresAuth: true },
-      components: {
-        layout: Signup,
-        content: Signup
       }
     },
 
@@ -59,9 +26,7 @@ const router = new Router({
       meta: { requiresAuth: false },
       components: {
         layout: simpleLayout,
-        // route level code-splitting
-        // this generates a separate chunk (login.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
+
         content: () =>
           import(/* webpackChunkName: "login" */ "./views/login-form")
       }
@@ -72,9 +37,7 @@ const router = new Router({
       meta: { requiresAuth: false },
       components: {
         layout: simpleLayout,
-        // route level code-splitting
-        // this generates a separate chunk (login.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
+
         content: () =>
           import(/* webpackChunkName: "login" */ "./views/signup-form")
       }

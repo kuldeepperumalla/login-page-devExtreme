@@ -1,7 +1,8 @@
 <template>
-  <div class="hello">
+  <div class="main">
     <div class="text">
-      <h1>Home page</h1>
+      <h2>Home page</h2>
+      <router-link to="/signup">Not a member? | Sign up</router-link>
     </div>
   </div>
 </template>
@@ -10,14 +11,12 @@
 import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
-}
+export default class HomePage extends Vue {}
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped lang="scss">
-.hello {
+.main {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,7 +25,7 @@ export default class HelloWorld extends Vue {
 }
 
 .text {
-  padding: 30px;
+  padding: 0px;
 
   h1 {
     font-weight: bold;
