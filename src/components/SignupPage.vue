@@ -1,6 +1,6 @@
 <template>
   <div id="page">
-    <div class="loginbox">
+    <div class="signupbox">
       <div class="headerText">
         <div class="title">
           <h1 class="text">Sign-up</h1>
@@ -134,5 +134,5 @@ export default class SignupPage extends Vue {
 </script>
 
 <style  lang="scss" scoped>
-@import "src/assets/signup.scss";
+@import "src/assets/index.scss";
 </style>

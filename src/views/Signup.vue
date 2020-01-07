@@ -13,6 +13,3 @@ import SignupPage from "../components/SignupPage.vue";
 })
 export default class Signup extends Vue {}
 </script>
-
-<style  lang="scss" scoped>
-</style>

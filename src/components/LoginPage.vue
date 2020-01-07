@@ -2,11 +2,9 @@
   <div>
     <div class="loginbox">
       <div class="headerText">
-        <router-link to="/login">
-          <div class="title">
-            <h1 class="text">Login</h1>
-          </div>
-        </router-link>
+        <div class="title">
+          <h1 class="text">Login</h1>
+        </div>
       </div>
       <div id="box">
         <DxResponsiveBox :screen-by-width="screen" single-column-screen="sm">
@@ -20,38 +18,34 @@
           <DxCol :ratio="1" />
           <DxRow :ratio="1" />
           <DxRow :ratio="1" />
-
-          <DxItem>
-            <DxLocation :row="1" :col="1" screen="lg" />
-            <DxLocation :row="1" :col="1" :colspan="0" screen="sm" />
-            <template #default>
-              <div id="app">
-                <form>
-                  <!-- <p>Username</p> -->
-                  <div class="dx-field">
-                    <dx-text-box placeholder="Email" width="100%">
-                      <dx-validator>
-                        <dx-required-rule message="Username is required" />
-                      </dx-validator>
-                    </dx-text-box>
-                  </div>
-                  <!-- <p>Password</p> -->
-                  <div class="dx-field">
-                    <dx-text-box
-                      v-on:keyup.enter="onSubmit"
-                      placeholder="Password"
-                      width="100%"
-                      mode="password"
-                    >
-                      <dx-validator>
-                        <dx-required-rule message="Password is required" />
-                      </dx-validator>
-                    </dx-text-box>
-                  </div>
-                </form>
-              </div>
-            </template>
-          </DxItem>
+          <slot name="input field">
+            <DxItem>
+              <DxLocation :row="1" :col="1" screen="lg" />
+              <DxLocation :row="1" :col="1" :colspan="0" screen="sm" />
+              <template #default>
+                <div id="app">
+                  <form>
+                    <!-- <p>Username</p> -->
+                    <div class="dx-field">
+                      <dx-text-box placeholder="Email" width="100%">
+                        <dx-validator>
+                          <dx-required-rule message="Username is required" />
+                        </dx-validator>
+                      </dx-text-box>
+                    </div>
+                    <!-- <p>Password</p> -->
+                    <div class="dx-field">
+                      <dx-text-box placeholder="Password" width="100%" mode="password">
+                        <dx-validator>
+                          <dx-required-rule message="Password is required" />
+                        </dx-validator>
+                      </dx-text-box>
+                    </div>
+                  </form>
+                </div>
+              </template>
+            </DxItem>
+          </slot>
         </DxResponsiveBox>
       </div>
       <!-- Button -->
@@ -95,6 +89,7 @@ import {
   DxCol,
   DxRow
 } from "devextreme-vue/responsive-box";
+
 @Component({
   components: {
     DxButton,
@@ -125,5 +120,5 @@ export default class Login extends Vue {
 </script>
 
 <style  lang="scss" scoped>
-@import "src/assets/login.scss";
+@import "src/assets/index.scss";
 </style>

@@ -1,0 +1,23 @@
+[33mcommit bc24351e47c4d70b6eb158e15a9ff4aa13fe3ae4[m[33m ([m[1;36mHEAD -> [m[1;32mversion1[m[33m, [m[1;31morigin/version1[m[33m)[m
+Author: kuldeepperumalla <kuldeepperumalla325@gmail.com>
+Date:   Tue Jan 7 13:53:08 2020 +0530
+
+    changed layout color
+
+[33mcommit e4a7c7bdc0118d3d921aab129c79b0f5fdfb88b7[m[33m ([m[1;32mmaster[m[33m)[m
+Author: kuldeepperumalla <kuldeepperumalla325@gmail.com>
+Date:   Tue Jan 7 12:52:55 2020 +0530
+
+    adding code error fix and changes in layout from branch
+
+[33mcommit c69513d6c232ec491df29efbc5a909ad936fcece[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;31morigin/Code-Branch[m[33m)[m
+Author: kuldeepperumalla <kuldeepperumalla325@gmail.com>
+Date:   Mon Jan 6 12:19:48 2020 +0530
+
+    Cleaned Code
+
+[33mcommit 2426c9c9b47d89d658351b6dc28dfb92a71784a6[m
+Author: kuldeep perumalla <kuldeepperumalla@gmail.com>
+Date:   Mon Jan 6 10:00:11 2020 +0530
+
+    Initial Commit

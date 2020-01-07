@@ -30,10 +30,6 @@ export default class HomePage extends Vue {}
   h1 {
     font-weight: bold;
     color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: lightblue;
-    }
   }
 }
 </style>
