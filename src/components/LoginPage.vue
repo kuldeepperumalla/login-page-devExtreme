@@ -37,7 +37,12 @@
                   </div>
                   <!-- <p>Password</p> -->
                   <div class="dx-field">
-                    <dx-text-box placeholder="Password" width="100%" mode="password">
+                    <dx-text-box
+                      v-on:keyup.enter="onSubmit"
+                      placeholder="Password"
+                      width="100%"
+                      mode="password"
+                    >
                       <dx-validator>
                         <dx-required-rule message="Password is required" />
                       </dx-validator>
@@ -60,7 +65,7 @@
                 text="LOGIN"
                 type="success"
                 styling-mode="contained"
-                @click="onLoginClick"
+                @click="onSubmit"
               />
             </div>
           </div>
@@ -109,7 +114,7 @@ export default class Login extends Vue {
   screen(width: any) {
     return width < 500 ? "sm" : "lg";
   }
-  onLoginClick(e: any) {
+  onSubmit(e: any) {
     if (!e.validationGroup.validate().isValid) {
       return;
     }

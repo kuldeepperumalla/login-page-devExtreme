@@ -74,7 +74,7 @@
                 text="SIGN UP"
                 type="success"
                 styling-mode="contained"
-                @click="onLoginClick"
+                @click="onSubmit"
               />
             </div>
           </div>
@@ -122,7 +122,7 @@ export default class SignupPage extends Vue {
   screen(width: any) {
     return width < 500 ? "sm" : "lg";
   }
-  onLoginClick(e: any) {
+  onSubmit(e: any) {
     if (!e.validationGroup.validate().isValid) {
       return;
     }

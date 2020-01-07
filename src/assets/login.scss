@@ -7,13 +7,19 @@ a {
 .text {
   margin: 11px 0px;
   font-weight: normal;
+  color: grey;
 }
 
 .title {
   color: white;
-  font-family: "Quicksand", sans-serif;
-  font-weight: 100;
+
+  font-weight: normal;
 }
+
+.dx-button-mode-contained {
+  border-radius: 0px;
+}
+
 
 .loginbox {
   width: 450px;
@@ -27,7 +33,7 @@ a {
   border-radius: 1px;
   box-shadow: 0px 5px 2px -20px #6a6a6a;
   border: solid;
-  border-width: 0.5px;
+  border-width: 1px;
   border-color: lightgray;
 }
 
@@ -73,7 +79,7 @@ a {
   color: grey;
   border-bottom: solid;
   border-width: 0.1px;
-  border-color: rgb(161, 161, 161);
-  background: #dedede;
+  border-color: lightgrey;
+  background: #f2fbf0;
   height: 50px;
 }
