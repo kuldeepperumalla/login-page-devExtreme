@@ -24,6 +24,10 @@ export default class App extends Vue {
   color: #2c3e50;
 }
 
+body {
+  background-image: "Mountains.ai.svg";
+}
+
 #box {
   padding: 18px 0px;
 }
