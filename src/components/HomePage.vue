@@ -1,9 +1,6 @@
 <template>
   <div class="main">
-    <div class="text">
-      <h2>Home page</h2>
-      <router-link to="/signup">Not a member? | Sign up</router-link>
-    </div>
+    <slot name="content"></slot>
   </div>
 </template>
 

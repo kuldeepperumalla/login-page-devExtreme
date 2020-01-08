@@ -7,61 +7,7 @@
         </div>
       </div>
       <div id="box">
-        <DxResponsiveBox :screen-by-width="screen" single-column-screen="sm">
-          <DxRow :ratio="1" screen="xs" />
-
-          <DxRow :ratio="1" screen="sm" />
-          <DxRow :ratio="1" />
-          <DxRow :ratio="1" />
-
-          <DxCol :ratio="1" />
-          <DxCol :ratio="11" screen="lg" />
-          <DxCol :ratio="1" />
-
-          <DxItem>
-            <DxLocation :row="1" :col="1" screen="lg" />
-            <DxLocation :row="1" :col="1" :colspan="0" screen="sm" />
-            <template #default>
-              <div id="app">
-                <form>
-                  <!-- <p>Email</p> -->
-                  <div icon="email" class="dx-field">
-                    <dx-text-box placeholder="Email" width="100%">
-                      <dx-validator>
-                        <dx-required-rule message="Username is required" />
-                      </dx-validator>
-                    </dx-text-box>
-                  </div>
-
-                  <!-- <p>Modbile Number</p> -->
-                  <div class="dx-field">
-                    <dx-text-box placeholder="Phone" width="100%">
-                      <dx-validator>
-                        <dx-required-rule message="Mobile Number is required" />
-                      </dx-validator>
-                    </dx-text-box>
-                  </div>
-                  <!-- <p>Password</p> -->
-                  <div class="dx-field">
-                    <dx-text-box placeholder="Password" width="100%" mode="password">
-                      <dx-validator>
-                        <dx-required-rule message="Password is required" />
-                      </dx-validator>
-                    </dx-text-box>
-                  </div>
-                  <!-- <p>ConfirmPassword</p> -->
-                  <div class="dx-field">
-                    <dx-text-box placeholder="Conform Password" width="100%" mode="password">
-                      <dx-validator>
-                        <dx-required-rule message="Confirmation is required" />
-                      </dx-validator>
-                    </dx-text-box>
-                  </div>
-                </form>
-              </div>
-            </template>
-          </DxItem>
-        </DxResponsiveBox>
+        <slot name="content"></slot>
       </div>
       <!-- Button -->
       <div class="buttons-demo dx-field">
@@ -122,12 +68,12 @@ export default class SignupPage extends Vue {
   screen(width: any) {
     return width < 500 ? "sm" : "lg";
   }
+
   onSubmit(e: any) {
     if (!e.validationGroup.validate().isValid) {
       return;
     }
     e.validationGroup.reset();
-    console.log(e.target);
     alert("thank you for signing up!");
   }
 }
